@@ -1,0 +1,250 @@
+/* General Styles */
+
+:root {
+    /* Backgrounds */
+    --background-dark: #0D1117;
+    --background-light: #F8F9FA;
+  
+    /* Containers */
+    /* --container-dark: #1A1A2E; */
+    --container-dark: #dfdfdf15;
+    --container-light: #EAEAEA;
+
+    --hover-dark: #ffffff15;
+    --hover-light: #EAEAEA;
+  
+    /* Text Colors */
+    --text-light: #E0E0E0;
+    --text-dark: #222831;
+  
+    /* Accent Colors */
+    --bullish-green: #00FF99;
+    --bearish-red: #FF4C4C;
+    --neutral-blue: #29B6F6;
+
+    --container-shadow: -2px 2px 2px -2px rgba(248, 248, 248, 0.765);
+
+    --link-color: #00ff99;
+  }
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #121212;
+    color: #e0e0e0;
+    text-align: center;
+    margin: 0;
+    padding: 20px;
+}
+
+/* Filter Container */
+.filter-container {
+    background: #1c1c1c;
+    padding: 20px;
+    border-radius: 10px;
+    width: 50%;
+    margin: 20px auto;
+    box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.1);
+}
+
+
+input {
+    background: #2a2a2a;
+    border: 1px solid #444;
+    color: #e0e0e0;
+    padding: 8px;
+    border-radius: 5px;
+    /* width: 80%; */
+    /* text-align: center; */
+    margin-top: 5px;
+}
+/* Title & Description */
+.titleField {
+    background-color: #d7d7d769;
+}
+h2 {
+    margin: 0;
+    font-size: 22px;
+    color: #007bff;
+    padding: 5px;
+}
+
+h3 {
+    margin: 0;
+    font-size: 20px;
+    color: #007bff;
+    padding: 5px;
+}
+.description {
+    font-size: 12px;
+    font-style: italic;
+    color: #b0b0b0;
+    margin-top: 0px;
+}
+
+/* Filter Options */
+.filter-options {
+    display: flex;
+    justify-content: flex-start;
+    gap: 20px;
+    /* margin-top: 15px; */
+}
+
+.filter-group {
+    text-align: left;
+}
+
+.filter-group2 {
+    text-align: right;
+}
+label {
+    font-size: 12px;
+    font-weight: bold;
+    display: block;
+    /* margin-bottom: 5px; */
+    margin-top: 5px;
+}
+
+a {
+    color: var(--link-color);
+}
+
+
+/* Dropdowns */
+select {
+    background: #2a2a2a;
+    border: 1px solid #444;
+    color: #e0e0e0;
+    padding: 4px;
+    border-radius: 5px;
+    width: 120px;
+    text-align: center;
+    font-size: 14px;
+}
+
+.table-container {
+    max-height: 50vh; /* Adjust height as needed */
+    overflow-y: auto;
+
+}
+
+/* .table-container table {
+    width: 100%;
+    border-collapse: collapse;
+} */
+
+.table-container::-webkit-scrollbar {
+    width: 6px;
+}
+
+.table-container::-webkit-scrollbar-thumb {
+    background: #666;
+    border-radius: 3px;
+}
+table {
+    /* width: 100%; */
+    border-collapse: collapse;
+    /* background-color: #1e1e2f8c; */
+    background-color: var(--container-dark);
+    color: #ffffff;
+    border-radius: 8px;
+    overflow: hidden;
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); */
+    box-shadow: var(--container-shadow);
+    cursor: default;
+    /* max-height: 50px; */
+}
+
+thead {
+    position: sticky;
+}
+
+table th, table td {
+    padding: 1rem;
+    text-align: left;
+    /* border-bottom: 1px solid #333; */
+}
+
+table td {
+    border: 1px solid #3f3f3f;;
+}
+
+table th {
+    /* background-color: #2929408c; */
+    background-color: var(--container-dark);
+    font-weight: bold;
+}
+
+tbody tr:hover {
+    /* background-color: #33334d; */
+    background-color: var(--hover-dark);
+    /* color: #00aaff; */
+}
+
+table tr.new-token {
+    background-color: #51ff00a8;
+}
+
+table tr.new-token:hover {
+    background-color: #4dff00;
+}
+
+table tr.marked-row {
+    background-color: #f7a102a8;
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .filter-container {
+        width: 90%;
+    }
+
+    .filter-options {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    select {
+        width: 100%;
+    }
+}
+
+
+.toggle-btn {
+    padding: 12px 25px;
+    font-size: 16px;
+    font-weight: bold;
+    border: 2px solid #444;
+    background: linear-gradient(145deg, #1a1a1a, #222);
+    color: #e0e0e0;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: all 0.3s ease-in-out;
+}
+
+
+.toggle-btn.active {
+    background: linear-gradient(145deg, #007bff, #0056b3);
+    border-color: #007bff;
+    color: #fff;
+    box-shadow: 0px 4px 10px rgba(0, 123, 255, 0.5);
+}
+
+.button1 {
+    background: #007bff;
+    color: #fff;
+    font-size: 16px;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    margin-top: 15px;
+}
+
+.button1:hover {
+    background: #0056b3;
+    box-shadow: 0px 4px 10px rgba(0, 123, 255, 0.5);
+}
+
+
